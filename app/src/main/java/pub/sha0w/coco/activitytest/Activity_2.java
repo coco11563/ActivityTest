@@ -46,9 +46,10 @@ public class Activity_2 extends BaseActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent();
-                intent1.putExtra("datareturn" , "Hello ActivityTest");
-                setResult(RESULT_OK, intent1);
+//                Intent intent1 = new Intent();
+//                intent1.putExtra("datareturn" , "Hello ActivityTest");
+//                setResult(RESULT_OK, intent1);
+                ActivityTest.startActivityTest(Activity_2.this , "Hay" , " babe");
                 finish();
             }
         }
@@ -56,9 +57,10 @@ public class Activity_2 extends BaseActivity {
     }
     @Override
     public void onBackPressed(){
-        Intent intent3 = new Intent();
-        intent3.putExtra("datareturn","Hello ActivityTest! This message is from the backPress");
-        setResult(RESULT_OK , intent3);
+        ActivityTest.startActivityTest(Activity_2.this ,"Hello ActivityTest! This message is from the backPress" , " babe");
+//        Intent intent3 = new Intent();
+//        intent3.putExtra("datareturn","Hello ActivityTest! This message is from the backPress");
+//        setResult(RESULT_OK , intent3);
         finish();
     }
 }

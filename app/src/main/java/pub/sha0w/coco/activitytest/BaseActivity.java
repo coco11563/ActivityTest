@@ -18,6 +18,6 @@ public class BaseActivity extends Activity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityGC.finishAll();
+//        ActivityGC.finishAll();
     }
 }

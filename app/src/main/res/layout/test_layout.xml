@@ -8,7 +8,7 @@
         android:layout_width="69dp"
         android:layout_height="wrap_content"
         android:text="再试试吧"
-        android:id="@+id/button3"
+        android:id="@+id/button_3"
         android:layout_gravity="center_vertical" />
 
     <Button
