@@ -13,7 +13,7 @@ import android.widget.Toast;
 /**
  * Created by coco1 on 2016/8/27.
  */
-public class ActivityTest extends Activity{
+public class ActivityTest extends BaseActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,7 @@ public class ActivityTest extends Activity{
         setContentView(R.layout.test_layout);//在这里注册layout
         Button button1 = (Button)findViewById(R.id.button_1);//通过findViewById获取按钮的ID，再通过Button的转义将View型数据转换成Button型
         Button button2 = (Button)findViewById(R.id.button_2);//通过findViewById获取按钮的ID，再通过Button的转义将View型数据转换成Button型
+        Button button3 = (Button)findViewById(R.id.button3);//通过findViewById获取按钮的ID，再通过Button的转义将View型数据转换成Button型
 //设置Button的Onclick监听事件
         button1.setOnClickListener( new View.OnClickListener(){
             @Override
@@ -37,6 +38,15 @@ public class ActivityTest extends Activity{
                 intent.addCategory("pub.sha0w.coco.activitytest.MY_CATEGORY");
                 intent.putExtra("extradata" , data);//putExtra接受两个变量，一个是key，用于在后面从Intent取值，第二个参数才是我们想要的值
                 startActivityForResult(intent,1);//用这个方法你就会很想要回复！
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String data = new String("Hi Activity_2");
+                Intent intent = new Intent(ActivityTest.this,Activity_2.class);
+                intent.putExtra("extradata" , data);//putExtra接受两个变量，一个是key，用于在后面从Intent取值，第二个参数才是我们想要的值
+                startActivity(intent);//用这个方法你就会很想要回复！
             }
         });
 

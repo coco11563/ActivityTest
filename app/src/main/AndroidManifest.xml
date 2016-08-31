@@ -8,6 +8,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ActivityTest"
+            android:launchMode="singleTask"
             android:label="THIS IS MY FIRST ACTIVITY">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
