@@ -19,7 +19,9 @@ public class ActivityTest extends BaseActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("instance status" , Boolean.toString(savedInstanceState != null));
         if(savedInstanceState!=null) {
+            Log.i("WARINING", "Start On CREATE!!!");
             String data1 = savedInstanceState.getString("param_1");
             String data2 = savedInstanceState.getString("param_2");
             Toast.makeText(ActivityTest.this,"It is coming", Toast.LENGTH_SHORT).show();
@@ -51,7 +53,6 @@ public class ActivityTest extends BaseActivity{
                 intent.addCategory("pub.sha0w.coco.activitytest.MY_CATEGORY");
                 intent.putExtra("extradata" , data);//putExtra接受两个变量，一个是key，用于在后面从Intent取值，第二个参数才是我们想要的值
                 startActivityForResult(intent,1);//用这个方法你就会很想要回复！
-                finish();
             }
         });
         button3.setOnClickListener(new View.OnClickListener(){
@@ -61,7 +62,6 @@ public class ActivityTest extends BaseActivity{
                 Intent intent = new Intent(ActivityTest.this,Activity_2.class);
                 intent.putExtra("extradata" , data);//putExtra接受两个变量，一个是key，用于在后面从Intent取值，第二个参数才是我们想要的值
                 startActivity(intent);
-                finish();
             }
         });
 

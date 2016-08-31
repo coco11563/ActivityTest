@@ -50,7 +50,6 @@ public class Activity_2 extends BaseActivity {
 //                intent1.putExtra("datareturn" , "Hello ActivityTest");
 //                setResult(RESULT_OK, intent1);
                 ActivityTest.startActivityTest(Activity_2.this , "Hay" , " babe");
-                finish();
             }
         }
         );
@@ -61,6 +60,5 @@ public class Activity_2 extends BaseActivity {
 //        Intent intent3 = new Intent();
 //        intent3.putExtra("datareturn","Hello ActivityTest! This message is from the backPress");
 //        setResult(RESULT_OK , intent3);
-        finish();
     }
 }
