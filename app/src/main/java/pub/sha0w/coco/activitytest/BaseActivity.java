@@ -11,6 +11,13 @@ public class BaseActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActivityGC.add(this);
         Log.d("BaseActivity" , getClass().getSimpleName());
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityGC.finishAll();
     }
 }

@@ -6,6 +6,11 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button 3"
+        android:text="点我，就能充话费"
         android:id="@+id/button_3" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="让这一切烟消云散"
+        android:id="@+id/button_4" />
 </LinearLayout>
